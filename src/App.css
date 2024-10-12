@@ -1,38 +1,233 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html,
+body {
+    height: 100%;
+    /* ทำให้ html และ body มีความสูง 100% */
+    margin: 0;
+    /* ลบ margin */
+    font-family: "Lato", sans-serif;
+    /* ฟอนต์ที่ใช้ */
+    font-size: 14px;
+    /* ขนาดตัวอักษร */
+    display: flex;
+    /* ใช้ Flexbox */
+    flex-direction: column;
+    /* จัดแนวตั้ง */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-strip {
+    background-color: #272343;
+    /* สีพื้นหลัง */
+    padding: 4px 0;
+    /* ระยะห่างด้านบนและล่าง */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    max-width: 1200px;
+    /* ความกว้างสูงสุด */
+    margin: 0 auto;
+    /* จัดให้อยู่กลาง */
+    padding: 0 15px;
+    /* ระยะห่างด้านข้าง */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-center {
+    text-align: center;
+    /* จัดข้อความกลาง */
+    color: white;
+    /* สีข้อความ */
+    font-size: 14px;
+    /* ขนาดตัวอักษร */
 }
 
-.App-link {
-  color: #61dafb;
+.middle-strip {
+    background-color: #F0F2F3;
+    /* สีพื้นหลัง */
+    padding: 4px 0;
+    /* ระยะห่างด้านบนและล่าง */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logoWrapper {
+    flex: 0 0 100px;
+    /* ความกว้างของโลโก้ */
+}
+
+.logo {
+    width: 50px;
+    /* ความกว้างของโลโก้ */
+    height: auto;
+    /* ความสูงอัตโนมัติ */
+}
+
+.part2 {
+    display: flex;
+    /* ใช้ Flexbox */
+    align-items: center;
+    /* จัดให้กลางในแนวตั้ง */
+    justify-content: space-between;
+    /* จัดให้มีระยะห่าง */
+    flex-grow: 1;
+    /* ขยายเต็มพื้นที่ */
+}
+
+.search-box {
+    flex: 1;
+    /* ให้ input ขยายเต็มพื้นที่ */
+    margin: 0 15px;
+    /* ระยะห่างด้านข้าง */
+}
+
+.user-area {
+    display: flex;
+    /* ใช้ Flexbox */
+    align-items: center;
+    /* จัดให้กลางในแนวตั้ง */
+}
+
+.circle {
+    background-color: #FFF;
+    /* สีพื้นหลังของปุ่ม */
+    border-radius: 50%;
+    /* มุมกลม */
+    width: 40px;
+    /* ความกว้าง */
+    height: 40px;
+    /* ความสูง */
+    display: flex;
+    /* ใช้ Flexbox */
+    align-items: center;
+    /* จัดให้กลางในแนวตั้ง */
+    justify-content: center;
+    /* จัดให้กลางในแนวนอน */
+    padding: 0;
+    /* ไม่มี padding */
+    border: none;
+    /* ไม่มีขอบ */
+    transition: background-color 0.3s;
+    /* เปลี่ยนสีอย่างนุ่มนวล */
+}
+
+.circle:hover {
+    background-color: #E0E0E0;
+    /* เปลี่ยนสีเมื่อ hover */
+}
+
+.navBar {
+    background-color: #FFF;
+    /* สีพื้นหลัง */
+    padding: 10px 0;
+    /* ระยะห่างด้านบนและล่าง */
+    border-bottom: 1px solid #EAEAEA;
+    /* ขอบด้านล่าง */
+}
+
+.navPart2 {
+    display: flex;
+    /* ใช้ Flexbox */
+    justify-content: flex-start;
+    /* จัดให้ชิดซ้าย */
+}
+
+.list-inline {
+    list-style: none;
+    /* ลบจุดจากรายการ */
+    padding: 0;
+    /* ลบ padding */
+    margin: 0;
+    /* ลบ margin */
+}
+
+.list-inline-item {
+    display: inline-block;
+    /* ทำให้เป็น inline-block */
+    margin: 0 20px;
+    /* ระยะห่างระหว่างรายการ */
+}
+
+.list-inline-item a {
+    text-decoration: none;
+    /* ลบการขีดเส้นใต้ */
+    color: #00A5C4;
+    /* สีของลิงก์ */
+    font-size: 16px;
+    /* ขนาดตัวอักษร */
+    transition: color 0.3s;
+    /* เปลี่ยนสีอย่างนุ่มนวล */
+}
+
+.list-inline-item a:hover {
+    color: #007B8E;
+    /* เปลี่ยนสีเมื่อ hover */
+    font-weight: bold;
+    /* หนาเมื่อ hover */
+}
+
+.headerSearch {
+    display: flex;
+    /* ใช้ Flexbox สำหรับจัดตำแหน่ง */
+    align-items: center;
+    /* จัดให้กลางในแนวตั้ง */
+    width: 100%;
+    /* ความกว้างของกล่องค้นหา */
+    max-width: 600px;
+    /* กำหนดความกว้างสูงสุด */
+    margin: 0 auto;
+    /* จัดให้อยู่กลาง */
+}
+
+.headerSearch input {
+    flex: 1;
+    /* ให้ input ขยายเต็มพื้นที่ */
+    padding: 10px;
+    /* เพิ่ม padding */
+    border: 1px solid #ccc;
+    /* ขอบสีเทา */
+    border-radius: 4px;
+    /* มุมกลม */
+    font-size: 16px;
+    /* ขนาดตัวอักษร */
+    outline: none;
+    /* ลบเส้นขอบเมื่อเลือก */
+    margin-right: 10px;
+    /* ระยะห่างระหว่าง input และปุ่ม */
+}
+
+.headerSearch button {
+    background-color: #00A5C4;
+    /* สีพื้นหลังของปุ่ม */
+    color: white;
+    /* สีตัวอักษร */
+    border: none;
+    /* ไม่มีขอบ */
+    border-radius: 4px;
+    /* มุมกลม */
+    padding: 10px 15px;
+    /* เพิ่ม padding */
+    cursor: pointer;
+    /* เปลี่ยน cursor เมื่อ hover */
+}
+
+.headerSearch button:hover {
+    background-color: #007B8E;
+    /* เปลี่ยนสีเมื่อ hover */
+}
+
+.footer {
+    background-color: #F0F2F3;
+    /* สีพื้นหลัง */
+    color: black;
+    /* สีข้อความ */
+    padding: 20px 0;
+    /* ระยะห่างด้านบนและล่าง */
+    text-align: center;
+    /* จัดข้อความกลาง */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    /* เงาที่ด้านบน */
+    width: 100%;
+    /* ความกว้างเต็ม */
+    bottom: 0;
+    /* ติดอยู่ที่ด้านล่าง */
+    position: fixed;
+    /* ตั้งตำแหน่งเป็น fixed */
 }
