@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+/* ตั้งค่าพื้นฐานสำหรับ HTML และ body */
 html,
 body {
     height: 100%;
@@ -16,6 +17,7 @@ body {
     /* จัดแนวตั้ง */
 }
 
+/* ส่วนของแถบด้านบน */
 .top-strip {
     background-color: #272343;
     /* สีพื้นหลัง */
@@ -23,6 +25,7 @@ body {
     /* ระยะห่างด้านบนและล่าง */
 }
 
+/* คอนเทนเนอร์หลัก */
 .container {
     max-width: 1200px;
     /* ความกว้างสูงสุด */
@@ -32,6 +35,7 @@ body {
     /* ระยะห่างด้านข้าง */
 }
 
+/* การจัดข้อความกลางในแถบ */
 .text-center {
     text-align: center;
     /* จัดข้อความกลาง */
@@ -41,6 +45,7 @@ body {
     /* ขนาดตัวอักษร */
 }
 
+/* ส่วนกลาง */
 .middle-strip {
     background-color: #F0F2F3;
     /* สีพื้นหลัง */
@@ -48,6 +53,7 @@ body {
     /* ระยะห่างด้านบนและล่าง */
 }
 
+/* โลโก้ */
 .logoWrapper {
     flex: 0 0 100px;
     /* ความกว้างของโลโก้ */
@@ -60,6 +66,7 @@ body {
     /* ความสูงอัตโนมัติ */
 }
 
+/* พื้นที่ที่มีปุ่มค้นหาและผู้ใช้ */
 .part2 {
     display: flex;
     /* ใช้ Flexbox */
@@ -71,6 +78,7 @@ body {
     /* ขยายเต็มพื้นที่ */
 }
 
+/* กล่องค้นหา */
 .search-box {
     flex: 1;
     /* ให้ input ขยายเต็มพื้นที่ */
@@ -78,6 +86,7 @@ body {
     /* ระยะห่างด้านข้าง */
 }
 
+/* พื้นที่สำหรับผู้ใช้ */
 .user-area {
     display: flex;
     /* ใช้ Flexbox */
@@ -85,6 +94,7 @@ body {
     /* จัดให้กลางในแนวตั้ง */
 }
 
+/* ปุ่มวงกลม */
 .circle {
     background-color: #FFF;
     /* สีพื้นหลังของปุ่ม */
@@ -113,6 +123,7 @@ body {
     /* เปลี่ยนสีเมื่อ hover */
 }
 
+/* เมนูนำทาง */
 .navBar {
     background-color: #FFF;
     /* สีพื้นหลัง */
@@ -122,6 +133,7 @@ body {
     /* ขอบด้านล่าง */
 }
 
+/* ส่วนของเมนู */
 .navPart2 {
     display: flex;
     /* ใช้ Flexbox */
@@ -129,6 +141,7 @@ body {
     /* จัดให้ชิดซ้าย */
 }
 
+/* รายการแบบ inline */
 .list-inline {
     list-style: none;
     /* ลบจุดจากรายการ */
@@ -145,6 +158,7 @@ body {
     /* ระยะห่างระหว่างรายการ */
 }
 
+/* ลิงก์ในรายการ */
 .list-inline-item a {
     text-decoration: none;
     /* ลบการขีดเส้นใต้ */
@@ -163,6 +177,7 @@ body {
     /* หนาเมื่อ hover */
 }
 
+/* ช่องค้นหาในส่วนหัว */
 .headerSearch {
     display: flex;
     /* ใช้ Flexbox สำหรับจัดตำแหน่ง */
@@ -213,6 +228,7 @@ body {
     /* เปลี่ยนสีเมื่อ hover */
 }
 
+/* ส่วนท้าย (Footer) */
 .footer {
     background-color: #F0F2F3;
     /* สีพื้นหลัง */
@@ -230,4 +246,176 @@ body {
     /* ติดอยู่ที่ด้านล่าง */
     position: fixed;
     /* ตั้งตำแหน่งเป็น fixed */
+}
+
+/* โมดอล (Modal) */
+.modal {
+    position: fixed;
+    /* ตั้งตำแหน่งเป็น fixed */
+    top: 0;
+    /* ตำแหน่งด้านบน */
+    left: 0;
+    /* ตำแหน่งด้านซ้าย */
+    width: 100%;
+    /* ความกว้างเต็ม */
+    height: 100%;
+    /* ความสูงเต็ม */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Background ดำที่โปร่งใส */
+    display: flex;
+    /* ใช้ Flexbox */
+    justify-content: center;
+    /* จัดให้อยู่กลางในแนวนอน */
+    align-items: center;
+    /* จัดให้อยู่กลางในแนวตั้ง */
+    z-index: 1000;
+    /* ให้สูงสุดเพื่อไม่ให้ซ้อนทับ */
+}
+
+.modal-content {
+    background-color: white;
+    /* สีพื้นหลัง */
+    padding: 20px;
+    /* เพิ่ม padding */
+    border-radius: 10px;
+    /* มุมโค้ง */
+    width: 400px;
+    /* ความกว้างของโมดอล */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* เงา */
+    position: relative;
+    /* ตำแหน่งสัมพันธ์ */
+}
+
+/* ปุ่มปิดในโมดอล */
+.close-button {
+    position: absolute;
+    /* ตำแหน่งแบบ absolute */
+    top: 10px;
+    /* ระยะห่างจากด้านบน */
+    right: 10px;
+    /* ระยะห่างจากด้านขวา */
+    background-color: red;
+    /* สีพื้นหลัง */
+    color: white;
+    /* สีตัวอักษร */
+    border: none;
+    /* ไม่มีขอบ */
+    padding: 5px 10px;
+    /* เพิ่ม padding */
+    cursor: pointer;
+    /* เปลี่ยน cursor เมื่อ hover */
+    font-size: 16px;
+    /* ขนาดตัวอักษร */
+    border-radius: 5px;
+    /* มุมกลม */
+}
+
+.close-button:hover {
+    background-color: darkred;
+    /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* Payment Container */
+.payment-container {
+    padding: 20px;
+    /* เพิ่ม padding */
+    background-color: #fff;
+    /* สีพื้นหลัง */
+    border-radius: 8px;
+    /* มุมโค้ง */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* เงา */
+    max-width: 400px;
+    /* ความกว้างสูงสุด */
+    margin: 20px auto;
+    /* จัดให้อยู่กลาง */
+}
+
+h2 {
+    text-align: center;
+    /* จัดข้อความกลาง */
+    color: #333;
+    /* สีข้อความ */
+}
+
+/* ส่วนของการชำระเงิน */
+.crypto-section,
+.amount-section {
+    margin-bottom: 15px;
+    /* ระยะห่างด้านล่าง */
+}
+
+/* ป้ายชื่อ */
+label {
+    display: block;
+    /* แสดงเป็น block */
+    margin-bottom: 5px;
+    /* ระยะห่างด้านล่าง */
+    color: #555;
+    /* สีข้อความ */
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    /* ความกว้าง 100% */
+    padding: 10px;
+    /* เพิ่ม padding */
+    border: 1px solid #ccc;
+    /* ขอบสีเทา */
+    border-radius: 4px;
+    /* มุมโค้ง */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
+    /* เปลี่ยนขอบสีเมื่อเลือก */
+}
+
+/* ปุ่มยืนยันการชำระเงิน */
+.submit-button {
+    background-color: #007bff;
+    /* สีพื้นหลัง */
+    color: white;
+    /* สีตัวอักษร */
+    padding: 10px 15px;
+    /* เพิ่ม padding */
+    border: none;
+    /* ไม่มีขอบ */
+    border-radius: 5px;
+    /* มุมโค้ง */
+    cursor: pointer;
+    /* เปลี่ยน cursor เมื่อ hover */
+    width: 100%;
+    /* ความกว้าง 100% */
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* สรุปการชำระเงิน */
+.payment-summary {
+    margin-top: 20px;
+    /* ระยะห่างด้านบน */
+    padding: 10px;
+    /* เพิ่ม padding */
+    background-color: #f1f1f1;
+    /* สีพื้นหลัง */
+    border-radius: 5px;
+    /* มุมโค้ง */
+}
+
+h3 {
+    margin-bottom: 10px;
+    /* ระยะห่างด้านล่าง */
+}
+
+p {
+    margin: 5px 0;
+    /* ระยะห่างด้านบนและล่าง */
 }

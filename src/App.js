@@ -9,6 +9,7 @@ import SignUp from './Pages/SignUp';
 import SellProductPage from './Pages/SellProduct';
 import Profile from './Pages/Profile';
 import SellProductDetailPage from './Pages/SellProductDetail';
+// import Payment from './Components/Payment';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/sellproduct" element={<SellProductPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/sellproduct/:id" element={<SellProductDetailPage />} />
+        {/* <Route path="/payment" element={<Payment />} /> */}
       </Routes>
     </BrowserRouter>
   );
